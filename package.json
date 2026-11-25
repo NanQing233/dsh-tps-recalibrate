@@ -1,23 +1,24 @@
 {
-  "name": "dsh-tps-recalibrate",
+  "name": "dsh-tps-splitter",
   "version": "0.1.0",
-  "description": "Per-model tok/s for the DeepSeek Harness composer speed pill.",
+  "description": "Splits DeepSeek Harness's native session-wide tok/s calculation into per-model readings.",
   "type": "module",
   "license": "MIT",
   "author": "NanQing233",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NanQing233/dsh-tps-recalibrate.git"
+    "url": "git+https://github.com/NanQing233/dsh-tps-splitter.git"
   },
-  "homepage": "https://github.com/NanQing233/dsh-tps-recalibrate#readme",
+  "homepage": "https://github.com/NanQing233/dsh-tps-splitter#readme",
   "bugs": {
-    "url": "https://github.com/NanQing233/dsh-tps-recalibrate/issues"
+    "url": "https://github.com/NanQing233/dsh-tps-splitter/issues"
   },
   "keywords": [
     "dsh-plugin",
     "deepseek-harness",
     "dsh",
     "tokens-per-second",
+    "tps-splitter",
     "per-model",
     "cordis",
     "speedometer"

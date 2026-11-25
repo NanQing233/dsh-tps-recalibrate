@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="docs/readme-icon.svg" width="96" height="96" alt="计速校准图标">
+  <img src="docs/readme-icon.svg" width="96" height="96" alt="计速拆分图标">
 </p>
 
-<h1 align="center">计速校准</h1>
+<h1 align="center">计速拆分</h1>
 
 <p align="center">
-  将 DeepSeek Harness 原生按会话计算 tok/s 的方式修正为按模型计算。
+  将 DeepSeek Harness 原生按会话计算 tok/s 的方式拆分为按模型计算。
 </p>
 
 <p align="center">
@@ -15,13 +15,13 @@
 ## 功能
 DeepSeek Harness的原生速度计算逻辑是以会话为单位计算该会话中的 token 输出速度，因此当在同一个会话切换模型时会将先前模型的速度与当前模型的速度合并计算，导致失去单模型速度的参考价值。
 
-本插件将原生计速胶囊逻辑改为按 `provider / model` 分桶，计算已落定步骤的 `outputTokens ÷ 解码耗时`，在切换模型时刷新，故在切换后的新模型还没有输出时不显示速度，避免沿用旧模型的读数。
+计速拆分将原生计速胶囊逻辑改为按 `provider / model` 分桶，计算已落定步骤的 `outputTokens ÷ 解码耗时`，在切换模型时刷新，故在切换后的新模型还没有输出时不显示速度，避免沿用旧模型的读数。
 
 ## 安装
 
 
 ```sh
-dsh plugin --profile web add dsh-tps-recalibrate
+dsh plugin --profile web add dsh-tps-splitter
 ```
 
 

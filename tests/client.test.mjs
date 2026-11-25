@@ -12,7 +12,7 @@ import vm from 'node:vm'
 const here = dirname(fileURLToPath(import.meta.url))
 const source = readFileSync(join(here, '..', 'client.js'), 'utf8')
 
-const NS = 'dsh-tps-recalibrate'
+const NS = 'dsh-tps-splitter'
 
 /**
  * Minimal React stand-in: elements are plain objects, function components are
@@ -46,7 +46,7 @@ function loadPlugin() {
   }
   vm.runInNewContext(source, sandbox, { filename: 'client.js' })
   assert.ok(registration !== undefined, 'client module registers through the module loader')
-  assert.equal(registration.id, 'dsh-tps-recalibrate')
+  assert.equal(registration.id, 'dsh-tps-splitter')
   const react = createReact()
   return registration.factory(name => {
     if (name === 'react') return react

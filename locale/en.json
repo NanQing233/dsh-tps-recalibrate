@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "TPS recalibration",
-    "description": "Replaces the composer token/s pill so it reports the current model's own output speed. Switching model re-reads the pill against the new route immediately, instead of averaging every model the session has used.",
+    "title": "TPS Splitter",
+    "description": "Splits the native composer tok/s pill by provider/model and refreshes when the model changes. A new model shows no speed until it has produced output, so the previous model's reading is never reused.",
     "detail": "docs/DETAIL.md"
   }
 }

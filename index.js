@@ -252,7 +252,7 @@ export function apply(ctx) {
     apply: fold,
     wire: { viewSchema: plainSchema, view: state => state.view },
   }).catch((error) => {
-    console.error('dsh-tps-recalibrate: projection registration failed', error)
+    console.error('dsh-tps-splitter: projection registration failed', error)
   })
 }
 

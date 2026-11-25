@@ -10,12 +10,12 @@
  * dialog times and the compact/detailed preference stay as they were.
  */
 window.__ModuleLoader__.load({
-  id: 'dsh-tps-recalibrate',
+  id: 'dsh-tps-splitter',
   factory(require) {
     const React = require('react')
     const { createPortal } = require('react-dom')
 
-    const NS = 'dsh-tps-recalibrate'
+    const NS = 'dsh-tps-splitter'
 
     const zh = {
       tokensPerSecond: '{tps} tok/s',
@@ -560,7 +560,7 @@ button.msp-pill[aria-expanded='true'] {
     return {
       inject: ['slots', 'locale', 'configForms'],
       apply(ctx) {
-        ctx.effect(() => ctx.locale.register(NS, { zh, en }), 'dsh-tps-recalibrate: dictionaries')
+        ctx.effect(() => ctx.locale.register(NS, { zh, en }), 'dsh-tps-splitter: dictionaries')
         let performanceUsage
         try {
           const form = ctx.configForms.get('ui-chat')

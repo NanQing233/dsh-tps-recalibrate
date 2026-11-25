@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="docs/readme-icon.svg" width="96" height="96" alt="TPS Recalibration icon">
+  <img src="docs/readme-icon.svg" width="96" height="96" alt="TPS Splitter icon">
 </p>
 
-<h1 align="center">TPS Recalibration</h1>
+<h1 align="center">TPS Splitter</h1>
 
 <p align="center">
-  Corrects DeepSeek Harness's native session-wide tok/s calculation to measure each model separately.
+  Split DeepSeek Harness's native session-wide tok/s calculation into per-model readings.
 </p>
 
 <p align="center">
@@ -15,13 +15,13 @@
 ## Features
 DeepSeek Harness's native speed meter computes token output speed for the whole session. When you switch models inside one session, the previous model's speed is blended into the current model's figure, so the reading stops being a useful per-model reference.
 
-This plugin changes the native speed pill to bucket by `provider / model`, computing `outputTokens ÷ decode time` over settled steps. It refreshes when the model changes, so a newly selected model shows no speed until it has produced output — never the previous model's reading.
+TPS Splitter changes the native speed pill to bucket by `provider / model`, computing `outputTokens ÷ decode time` over settled steps. It refreshes when the model changes, so a newly selected model shows no speed until it has produced output — never the previous model's reading.
 
 ## Installation
 
 
 ```sh
-dsh plugin --profile web add dsh-tps-recalibrate
+dsh plugin --profile web add dsh-tps-splitter
 ```
 
 
