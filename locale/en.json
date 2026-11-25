@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "TPS recalibration",
+    "description": "Replaces the composer token/s pill so it reports the current model's own output speed. Switching model re-reads the pill against the new route immediately, instead of averaging every model the session has used.",
+    "detail": "docs/DETAIL.md"
+  }
+}
